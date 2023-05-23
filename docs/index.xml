@@ -2995,7 +2995,7 @@ Change &lt;code>crane-scheduler&lt;/code> to &lt;code>default-scheduler&lt;/code
 &lt;h3 id="preprocessing">Preprocessing&lt;/h3>
 &lt;h4 id="data-imputation">Data imputation&lt;/h4>
 &lt;p>It is common for monitoring data to be missing at certain time points, and Crane will fill in the missing sampling points based on the surrounding data. The method is as follows:&lt;/p>
-&lt;p>Assume that the sampling data between the m-th and n-th sampling points are missing (m*+1&amp;lt;*n). Let the sampling values at points m-th and n-th be $v_m$ and $v_n$. Then, let $$\Delta = {v_n - v_m \over n-m}$$, The missing data between m-th and n-th are $v_m+\Delta , v_m+2\Delta , &amp;hellip;$&lt;/p>
+&lt;p>Assume that the sampling data between the m-th and n-th sampling points are missing (m+1&amp;lt;n). Let the sampling values at points m-th and n-th be $v_m$ and $v_n$. Then, let $$\Delta = {v_n - v_m \over n-m}$$, the missing data between m-th and n-th are $v_m+\Delta , v_m+2\Delta , &amp;hellip;$&lt;/p>
 &lt;p>&lt;img src="/images/algorithm/dsp/missing_data_fill.png" alt="">&lt;/p>
 &lt;h4 id="remove-outliers">Remove outliers&lt;/h4>
 &lt;p>Occasionally, there may be some extreme outlier data points in the monitoring data, and there are many reasons for these outliers, such as:&lt;/p>
